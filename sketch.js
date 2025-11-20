@@ -14,7 +14,7 @@ function setup() {
   cnv = createCanvas(windowWidth, windowHeight);
   let cx = (windowWidth - cnv.width) / 2;
   let cy = (windowHeight - cnv.height) / 2;
-  cnv.position(cx, cy);
+  //cnv.position(cx, cy);
   pixelDensity(1)
 
   // Create the video and hide it
@@ -38,8 +38,9 @@ function gotPoses(results) {
 
 function draw() {
   // Draw the webcam video
-  pg.clear()
+  
   image(video, 0, 0, width, height);
+  pg.clear()
 
   // Draw the skeleton connections
   for (let i = 0; i < poses.length; i++) {
